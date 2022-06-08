@@ -1,0 +1,285 @@
+*,
+::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+  
+
+html,
+body {
+    height: 100%; 
+}
+
+
+a,
+p,
+span,
+ul li {
+    list-style: none;
+    text-decoration: none; 
+}
+.box {
+	float: center;
+	padding: 50px 0px;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+
+
+.container { 
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #41B3A3 ;
+    z-index: 2;
+}
+body{
+    background-color: #41B3A3;
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+}
+
+.header__logo {
+    flex: 0 0 50px;
+    position: relative;
+    z-index: 3;
+    padding: 0 10px;
+}
+
+
+.header__burger {
+    display: none;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header__link {
+    margin-left: 20px;
+    padding: 15px 0px;
+}
+
+.header__link:hover {
+    color: #E27D60 ;
+    border-bottom: 2px solid #E27D60 ;
+} 
+
+.network {
+    padding: 0 10px;
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.network__item+.network__item {
+    margin-left: 10px;
+}
+
+.network__item:hover {
+    color: #E27D60 ;
+}
+.clearfix{
+    max-width: 1700px;
+    margin: auto;
+    background-color:   #C38D9E ;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.clearfix::after {
+	clear: both;
+	display: table;
+    background-color: #E8A87C ;
+}
+
+.options {
+    display: flex;
+    align-items: center; 
+}
+option{ 
+    background-color: #E8A87C ;
+    color: black;
+}
+option:active{
+    background-color: #E8A87C ;
+}
+
+.pagination {  
+    margin-left: 30px; 
+} 
+
+.pagination a {
+	color: black;
+	float: left;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ddd;
+	margin: 0 4px;
+}
+
+.pagination a.active {
+	background-color: #85DCBf;
+	color: white;
+	border: 1px solid #85DCBf;
+}
+
+.pagination a:hover:not(.active) {
+	background-color: #ddd;
+    
+}
+#request-table{
+    margin: 150px auto 0 ;
+    background-color: #E8A87C ;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1700px;
+    display: flex;
+    justify-content: center; 
+}
+
+.text{
+margin: 10px;
+padding: 10px;
+}
+.title{ 
+    margin: 10px;
+    padding: 10px;
+    
+}
+.time{
+margin: 10px;
+    padding: 10px;
+}
+tr{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    border: 1px solid #E27D60; 
+    margin: 20px 10px 10px;
+} 
+@media(max-width: 767px) { 
+
+    .header__burger {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #ECF1F0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all .3s ease 0s;
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: #ECF1F0;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s ease 0s;
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+
+    }
+
+    .header__burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #C38D9E;
+        padding-top: 0px;
+        flex-direction: column;
+        transition: all .3s ease 0s;
+    }
+
+    .network {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+ 
+
+    .header__menu.active {
+        top: 65px;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .header__list>li {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .header__link:hover {
+        color: #ECF1F0;
+        background-color: #0FAE96;
+        display: flex;
+        width: 100%;
+    }
+     
+}

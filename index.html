@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Lorem ipsum dolor" />
+    <meta name="keywords" content="Lorem ipsum dolor sit amet., maxime quas autem quod amet" />
+    <title>Новостной страница</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__body">
+                <a href="#" class="header__logo">Лого</a>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li>
+                            <a href="#" class="header__link">Главная</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Новости</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Блог</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__link">Контакты</a>
+                        </li>
+                    </ul>
+
+
+                </nav> 
+                    <ul class=" network">
+                        <li class="network__item"><i class="fab fa-telegram"></i></li>
+                        <li class="network__item"><i class="fab fa-twitter"></i></li>
+                        <li class="network__item"><i class="fab fa-youtube"></i></li>
+                        <li class="network__item"><i class="fab fa-whatsapp"></i></li>
+                    </ul>
+            </div> 
+        </div>
+
+    </header>
+
+    <div>
+        <table id="request-table">
+        </table>
+    </div>
+
+    <div class="clearfix">
+        <div class="box options">
+            <label>Выбор количества выводимых материалов: </label>
+            <select id="req_per_page" title="#" onchange="filter_requests()">
+                <option>3</option>
+                <option>6</option>
+                <option>9</option>
+                <option>Все</option>
+            </select>
+        </div>
+        <div class="box pagination">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+     
+</body>
+
+</html>
